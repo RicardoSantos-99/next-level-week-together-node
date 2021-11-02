@@ -1,0 +1,22 @@
+### find user by email
+GET {{url}}/user/ricardo@teste.com
+Accept: application/json
+
+### create a new user
+POST {{url}}/user
+Content-Type: application/json
+
+{
+  "name": "zika Santos",
+  "email": "ricardo@teste.com",
+  "password": "Q1q1w2e3r4!",
+  "admin": false
+}
+
+### create a new tag
+POST {{url}}/tag
+Content-Type: application/json
+
+{
+  "name": "tag1"
+}
