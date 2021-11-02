@@ -1,5 +1,5 @@
 import {UsersRepositories} from "../repositories/UsersRepositories";
-import {hash} from "typeorm/util/StringUtils";
+import { hash } from "bcryptjs"
 import { getCustomRepository } from "typeorm";
 
 interface IUserRequest {
@@ -21,7 +21,7 @@ class CreateUserService {
             throw new Error('User already exists.');
         }
 
-        const hashedPassword = hash(password);
+        const hashedPassword = await hash(password, process.env.SECRET_KEY | "Ziriguidum");
 
         const user = await userRepository.create({
             name,
