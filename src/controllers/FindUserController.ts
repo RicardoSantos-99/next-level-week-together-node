@@ -10,9 +10,7 @@ class FindUserController {
             throw new Error('Email is required');
         }
 
-
         const findUserService = new FindUserService()
-
 
         const user = await findUserService.execute({email});
 

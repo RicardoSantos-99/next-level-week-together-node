@@ -1,10 +1,13 @@
 import express, { Request, Response, NextFunction } from 'express';
+import * as dotenv from 'dotenv'
 import 'express-async-errors'
 import { router } from './routes'
 import 'reflect-metadata'
 
 import "./database"
 
+
+dotenv.config();
 const app = express();
 
 app.use(express.json())

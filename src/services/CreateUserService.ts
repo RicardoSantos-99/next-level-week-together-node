@@ -21,13 +21,13 @@ class CreateUserService {
             throw new Error('User already exists.');
         }
 
-        const hashedPassword = await hash(password, process.env.SECRET_KEY | "Ziriguidum");
+        const hashedPassword = await hash(password, 8);
 
         const user = await userRepository.create({
-            name,
-            email,
-            password: hashedPassword,
-            admin
+              name,
+              email,
+              password: hashedPassword,
+              admin
         });
 
         await userRepository.save(user);

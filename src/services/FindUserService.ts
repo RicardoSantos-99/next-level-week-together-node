@@ -5,7 +5,6 @@ interface IUserRequest {
     email: string;
 }
 
-
 class FindUserService {
     execute({ email }: IUserRequest ) {
         const userRepository = getCustomRepository(UsersRepositories);
