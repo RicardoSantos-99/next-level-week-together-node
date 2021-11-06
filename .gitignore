@@ -7,3 +7,4 @@ yarn.*
 .env
 .idea
 .vscode
+http-client.env.json

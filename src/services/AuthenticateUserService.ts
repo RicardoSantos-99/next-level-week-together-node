@@ -41,4 +41,4 @@ class AuthenticateUserService {
   }
 }
 
-export = { AuthenticateUserService }
+export { AuthenticateUserService }
