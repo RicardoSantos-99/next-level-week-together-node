@@ -54,3 +54,10 @@ Accept: application/json
 Authorization: Bearer {{auth_admin_token}}
 
 
+### list all tags
+GET {{url}}/tags
+Accept: application/json
+Authorization: Bearer {{auth_admin_token}}
+
+
+

@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { TagsRepository } from "../repositories/TagsRepository";
+import { TagsRepositories } from "../repositories/TagsRepositories";
 
 interface tag {
   name: string;
@@ -7,7 +7,7 @@ interface tag {
 
 class CreateTagService {
     async execute(name: string): Promise<tag> {
-        const tagsRepository = getCustomRepository(TagsRepository);
+        const tagsRepository = getCustomRepository(TagsRepositories);
 
         if (!name) {
             throw new Error("Name is required");
