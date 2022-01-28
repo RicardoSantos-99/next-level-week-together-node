@@ -7,8 +7,8 @@ POST {{url}}/users
 Content-Type: application/json
 
 {
-  "name": "zika Santos",
-  "email": "ricardo@teste.com3",
+  "name": "user two",
+  "email": "teste@santos.com",
   "password": "q1w2e3r4!",
   "admin": false
 }
@@ -18,7 +18,7 @@ POST {{url}}/tags
 Content-Type: application/json
 
 {
-  "name": "tag1"
+  "name": "Amor"
 }
 
 ### Authenticate user
@@ -28,4 +28,15 @@ Content-Type: application/json
 {
   "email": "ricardo@teste.com3",
   "password": "q1w2e3r4!"
+}
+
+### Create compliment
+POST {{url}}/compliments
+Content-Type: application/json
+
+{
+  "tag_id": "d89a5a13-7378-4e60-829c-f9511cbe9543",
+  "user_sender": "ea79f4b0-3eb6-4280-9b3d-246e6e412c0e",
+  "user_receiver": "03975c3d-0a86-4c75-9f07-1b53872cab76",
+  "message": "Teste de mensagem"
 }

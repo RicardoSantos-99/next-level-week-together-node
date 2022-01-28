@@ -41,7 +41,7 @@ class Compliment {
     message: string;
 
     @CreateDateColumn()
-    createdAt: Date;
+    created_at: Date;
 
     constructor() {
       if (!this.id) {
