@@ -8,3 +8,4 @@ yarn.*
 .idea
 .vscode
 http-client.env.json
+database/*.sqlite
