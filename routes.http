@@ -16,17 +16,20 @@ Content-Type: application/json
 ### create a new tag
 POST {{url}}/tags
 Content-Type: application/json
+Authorization: Bearer {{auth_token}}
 
 {
   "name": "Amor"
 }
+
+
 
 ### Authenticate user
 POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "ricardo@teste.com3",
+  "email": "ricardo@santos.com",
   "password": "q1w2e3r4!"
 }
 
@@ -40,3 +43,4 @@ Content-Type: application/json
   "user_receiver": "03975c3d-0a86-4c75-9f07-1b53872cab76",
   "message": "Teste de mensagem"
 }
+
