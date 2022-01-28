@@ -34,11 +34,11 @@ Content-Type: application/json
 ### Create compliment
 POST {{url}}/compliments
 Content-Type: application/json
+Authorization: Bearer {{auth_admin_token}}
 
 {
   "tag_id": "d89a5a13-7378-4e60-829c-f9511cbe9543",
-  "user_sender": "ea79f4b0-3eb6-4280-9b3d-246e6e412c0e",
   "user_receiver": "03975c3d-0a86-4c75-9f07-1b53872cab76",
-  "message": "Teste de mensagem"
+  "message": "Obrigado por me ajudar a alcançar o objetivo"
 }
 
