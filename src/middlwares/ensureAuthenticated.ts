@@ -16,7 +16,7 @@ const ensureAuthenticated =
     const [, token] = authToken.split(' ');
 
     try {
-      const { sub } = verify(token, process.env.JWT_KEY) as IPayload;
+      const {sub} = verify(token, process.env.JWT_KEY) as IPayload;
 
       req.user_id = sub;
 
