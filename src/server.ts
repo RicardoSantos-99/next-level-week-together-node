@@ -6,7 +6,6 @@ import 'reflect-metadata'
 
 import "./database"
 
-
 dotenv.config();
 const app = express();
 

@@ -1,10 +1,8 @@
-
 import { Request, Response, NextFunction } from 'express';
 
 const ensureAdmin =
     (req: Request, res: Response, next: NextFunction) => {
   const admin = false
-
 
   if (admin) {
     return next()

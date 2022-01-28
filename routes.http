@@ -1,5 +1,5 @@
 ### find user by email
-GET {{url}}/users/ricardo@teste.com
+GET {{url}}/users/ricardo@teste.com3
 Accept: application/json
 
 ### create a new user
@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
   "name": "zika Santos",
-  "email": "ricardo@teste.com2",
+  "email": "ricardo@teste.com3",
   "password": "q1w2e3r4!",
   "admin": false
 }
@@ -26,6 +26,6 @@ POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "ricardo@teste.com2",
+  "email": "ricardo@teste.com3",
   "password": "q1w2e3r4!"
 }
