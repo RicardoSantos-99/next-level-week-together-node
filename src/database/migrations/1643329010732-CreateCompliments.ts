@@ -32,6 +32,32 @@ export class CreateCompliments1643329010732 implements MigrationInterface {
               type: 'timestamp',
               default: "now()"
             }
+          ],
+          foreignKeys: [
+            {
+              name: 'FKUserSenderCompliments',
+              referencedTableName: 'users',
+              referencedColumnNames: ['id'],
+              columnNames: ['user_sender'],
+              onDelete: 'SET NULL',
+              onUpdate: 'SET NULL',
+            },
+            {
+              name: 'FKUserReceiverCompliments',
+              referencedTableName: 'users',
+              referencedColumnNames: ['id'],
+              columnNames: ['user_receiver'],
+              onDelete: 'SET NULL',
+              onUpdate: 'SET NULL',
+            },
+            {
+              name: 'FKTagsCompliments',
+              referencedTableName: 'tags',
+              referencedColumnNames: ['id'],
+              columnNames: ['tag_id'],
+              onDelete: 'SET NULL',
+              onUpdate: 'SET NULL',
+            }
           ]
         })
       )
