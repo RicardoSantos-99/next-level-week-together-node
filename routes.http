@@ -7,29 +7,27 @@ POST {{url}}/users
 Content-Type: application/json
 
 {
-  "name": "user two",
-  "email": "teste@santos.com",
+  "name": "user admin",
+  "email": "admin@admin.com",
   "password": "q1w2e3r4!",
-  "admin": false
+  "admin": true
 }
 
 ### create a new tag
 POST {{url}}/tags
 Content-Type: application/json
-Authorization: Bearer {{auth_token}}
+Authorization: Bearer {{auth_admin_token}}
 
 {
-  "name": "Amor"
+  "name": "GOD"
 }
-
-
 
 ### Authenticate user
 POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "ricardo@santos.com",
+  "email": "admin@admin.com",
   "password": "q1w2e3r4!"
 }
 
