@@ -27,18 +27,30 @@ POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "admin@admin.com",
+  "email": "ricardo@santos.com",
   "password": "q1w2e3r4!"
 }
 
 ### Create compliment
 POST {{url}}/compliments
 Content-Type: application/json
-Authorization: Bearer {{auth_admin_token}}
+Authorization: Bearer {{auth_token_2}}
 
 {
   "tag_id": "d89a5a13-7378-4e60-829c-f9511cbe9543",
-  "user_receiver": "03975c3d-0a86-4c75-9f07-1b53872cab76",
+  "user_receiver": "233ff1fb-9225-4d4e-8123-f952806fd671",
   "message": "Obrigado por me ajudar a alcançar o objetivo"
 }
+
+### list user received compliments
+GET {{url}}/users/compliments/send
+Accept: application/json
+Authorization: Bearer {{auth_token_2}}
+
+
+### list user sent compliments
+GET {{url}}/users/compliments/receive
+Accept: application/json
+Authorization: Bearer {{auth_admin_token}}
+
 
